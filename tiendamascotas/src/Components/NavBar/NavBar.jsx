@@ -12,7 +12,7 @@ const NavBar = () => {
         <li className="CategoryName"><Button color="secondary" variant="contained">Descuentos</Button></li>
         <li className="CategoryName"><Button color="secondary" variant="contained">Adopción</Button></li>
         <div className="CarritoContainer">
-          <CartWidget />
+          <CartWidget /> 4
           <Button color="secondary" variant="contained">Login</Button>
         </div>  
         
