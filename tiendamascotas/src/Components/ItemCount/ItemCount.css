@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 2px;
+    top: 2px;
+}
+
+.mas {
+    background: #AF9AB2;
+    padding: 7px;
+    padding-left: 7px;
+    border-bottom: 2px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.menos{
+    background: #0c64e98f;
+    padding: 7px;
+    padding-left: 11px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.add{
+    background: #4187f065;
+    margin-top: 5px;
+    padding: 4px;
+    padding-left: 4px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

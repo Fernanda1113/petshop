@@ -1,12 +1,15 @@
 import React from 'react'
-import Typography from '@mui/material/Typography'
+//import Typography from '@mui/material/Typography'
+import ItemCount from '../ItemCount/ItemCount'
 
-const ItemListContainer = (greeting) => {
+const ItemListContainer = ({name}) => {
+    const onAdd = () =>{
+        console.log('Producto agregado');
+    }
     return (
         <div>
-            <Typography variant="h3" color="primary">
-                Bienvenidos CanHijos!
-            </Typography>
+            <p>{name}</p>
+            <ItemCount onAdd={onAdd} stock='10'/>
         </div>
     )
 }
