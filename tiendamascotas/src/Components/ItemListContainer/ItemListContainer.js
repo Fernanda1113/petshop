@@ -1,15 +1,32 @@
 import React from 'react'
 //import Typography from '@mui/material/Typography'
-import ItemCount from '../ItemCount/ItemCount'
+//import ItemCount from '../ItemCount/ItemCount'
 
-const ItemListContainer = ({name}) => {
-    const onAdd = () =>{
-        console.log('Producto agregado');
-    }
+//const ItemListContainer = ({name}) => {
+ //   const onAdd = () =>{
+ //       console.log('Producto agregado');
+ //   }
+  //  return (
+  //      <div>
+  //          <p>{name}</p>
+   //         <ItemCount onAdd={onAdd} stock='10'/>
+   //     </div>
+ //   )
+//}
+const ItemListContainer = () => {
+    const [productos, setProductos] = useState([])
+    useEffect(() =>{
+        const list = getProductos()
+        list.then (list => {
+            setProductos(list)
+        })
+        return (() =>{
+            setProductos([])
+        })        
+    }, [])
     return (
-        <div>
-            <p>{name}</p>
-            <ItemCount onAdd={onAdd} stock='10'/>
+        <div className='ItemListContianer'>
+            <ItemList productos = {productos}/>
         </div>
     )
 }
