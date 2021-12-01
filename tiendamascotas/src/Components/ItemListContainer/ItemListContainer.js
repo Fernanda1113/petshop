@@ -1,6 +1,9 @@
 import React from 'react'
-//import Typography from '@mui/material/Typography'
-//import ItemCount from '../ItemCount/ItemCount'
+import ItemList from '../ItemList/ItemList'
+import { useState, useEffect } from 'react'
+import { getProductos } from '../../productos'
+import Typography from '@mui/material/Typography'
+import ItemCount from '../ItemCount/ItemCount'
 
 //const ItemListContainer = ({name}) => {
  //   const onAdd = () =>{

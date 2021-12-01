@@ -1,21 +1,22 @@
 import React from 'react'
+import './Item.css'
 
-const Item = ({product}) => {
+const Item = ({producto}) => {
     return (
         <div className='ItemCard'>
             <div className='ItemContainer'>
             <h2 className='HeaderItem'>
-                {product.name}
+                {producto.name}
             </h2>
             </div>
-            <img src={product.img} alt={product.name} className='ImgItem'/>
+            <img src={producto.img} alt={producto.name} className='ImgItem'/>
             <p className='Information'>
-                Categoria: {product.category}
+                Categoria: {producto.category}
             </p>
             <p className='Information'>
-                Valor: {product.price}
+                Valor: {producto.price}
             </p>
-            <button>Ver el producto</button>
+            <button className='ItemButton'>Ver el producto</button>
         </div>
     )
 }

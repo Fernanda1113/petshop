@@ -1,0 +1,32 @@
+.ItemCard{
+    width: 161px;
+    padding: 1px;
+    margin: 6px;
+    font-size: 10px;
+    background-color: #0c64e98f;
+    border: 3px solid #9e70e7;
+    border-radius: 10px;
+}
+.ImgItem{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: center;
+}
+
+.ItemContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+.HeaderItem{
+    display: flex;
+    justify-content: center;
+}
+
+.Information{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+}
