@@ -26,10 +26,17 @@ export const getCategorias = () => {
     })
 }
 
+export const getProductById = (id) => {
+    return new Promise ((resolve, reject) =>{
+        const product = productos.find(prod => parseInt(prod.id) === parseInt(id))
+        setTimeout(() => resolve(product), 1000)
+    })
+}
+
 export const getItem = () => {
     return new Promise((resolve, reject) =>{
         setTimeout(() =>{
-            resolve([1])
+            resolve([0])
         },500)
     })
 }
