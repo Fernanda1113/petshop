@@ -1,26 +1,27 @@
 import React from 'react'
 import ItemDetail from './ItemDetail'
-import { getItem } from '../../productos'
+import { getItem, getProductos } from '../../productos'
 import { useState, useEffect } from 'react'
 
 const ItemDetailContainer = () => {
-    const [productos, setProductos] = useState(null)
+    const [productos, setProductos] = useState()
+    const {paramId} = useParams()
+        console.log(paramId)
     useEffect(() =>{
-        const list = getItem()
-        list.then (list => {
-            setProductos(list)
+        getProductos(paramId)= thenItem =>{
+            setProductos(item)
+        }).catch(err =>{
+            console.log(err)
         })
         return (() =>{
-            setProductos([])
-            
-        })        
-    }, []);
-    return (
-        <div>
-            <ItemDetail id= {1} description= 'Perfume para mascota' category='gato'/>
-        </div>
-    )
-    
+            setProductos()
+        })
+        },[paramId])
+        return(
+            <div className='ItemDetailContainer'>
+                <ItemDetail product={productos}/>
+            </div>
+        )
 }
 
 export default ItemDetailContainer
