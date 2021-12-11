@@ -2,6 +2,7 @@ import React from 'react'
 import ItemDetail from './ItemDetail'
 import { getItem, getProductos } from '../../productos'
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
     const [productos, setProductos] = useState()
