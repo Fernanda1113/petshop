@@ -7,6 +7,7 @@ const CartWidget = () => {
     return (
         <IconButton color="primary" className="Carrito" aria-label="add to shopping cart" size="large">
         <ShoppingCartIcon />
+        0
     </IconButton>
     )
 }

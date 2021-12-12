@@ -1,23 +1,31 @@
 import React from 'react'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 const Item = ({producto}) => {
     return (
-        <div className='ItemCard'>
-            <div className='ItemContainer'>
+        <article className='ItemCard'>
+            <header className='ItemContainer'>
             <h2 className='HeaderItem'>
                 {producto.name}
             </h2>
-            </div>
+            </header>
+            <picture>
             <img src={producto.img} alt={producto.name} className='ImgItem'/>
+            </picture>
+            <section>
             <p className='Information'>
                 Categoria: {producto.category}
             </p>
             <p className='Information'>
                 Valor: {producto.price}
             </p>
-            <button className='ItemButton'>Ver el producto</button>
-        </div>
+            </section>
+        <footer>
+            <Link className='buttonSeeProduct' to={'/detail/${producto.id}'}>Ver el producto</Link>
+        </footer>
+            
+        </article>
     )
 }
 

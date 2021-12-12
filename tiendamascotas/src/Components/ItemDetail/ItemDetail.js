@@ -1,26 +1,26 @@
 import React from 'react'
 
 
-const ItemDetail = (productos) => {
+const ItemDetail = ({producto}) => {
     return(
         <article className='cardItem'>
             <header className='header'>
                 <h2 className='itemHeader'>
-                    {productos.name}
+                    {producto.name}
                 </h2>
             </header>
             <picture>
-                <img src={productos.img} alt={prodcut.name} className='imgItem'/>
+                <img src={producto.img} alt={producto.name} className='imgItem'/>
             </picture>
             <section>
                 <p className='info'>
-                    Categoría: {productos.category}
+                    Categoría: {producto.category}
                 </p>
                 <p className='info'>
-                    Descripción: {productos.description}
+                    Descripción: {producto.description}
                 </p>
                 <p className='info'>
-                    Precio: {productos.price}
+                    Precio: {producto.price}
                 </p>
             </section>
         </article>

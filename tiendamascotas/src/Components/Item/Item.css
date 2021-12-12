@@ -3,6 +3,7 @@
     padding: 1px;
     margin: 6px;
     font-size: 10px;
+    display: inline-block;
     background-color: #0c64e98f;
     border: 3px solid #9e70e7;
     border-radius: 10px;
@@ -29,4 +30,11 @@
     font-size: 16px;
     display: flex;
     justify-content: space-around;
+}
+
+.buttonSeeProduct{
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #0c64e980;
+    text-decoration: none;
 }

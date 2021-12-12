@@ -1,37 +1,33 @@
 import React from 'react'
-import ItemList from '../ItemList/ItemList'
 import { useState, useEffect } from 'react'
+import ItemList from '../ItemList/ItemList'
+import './ItemListContainer.css'
 import { getProductos } from '../../productos'
-import Typography from '@mui/material/Typography'
-import ItemCount from '../ItemCount/ItemCount'
 
-//const ItemListContainer = ({name}) => {
- //   const onAdd = () =>{
- //       console.log('Producto agregado');
- //   }
-  //  return (
-  //      <div>
-  //          <p>{name}</p>
-   //         <ItemCount onAdd={onAdd} stock='10'/>
-   //     </div>
- //   )
-//}
-const ItemListContainer = () => {
+const ItemListContainer = ()=> {
     const [productos, setProductos] = useState([])
-    useEffect(() =>{
+
+    useEffect(() => {
         const list = getProductos()
-        list.then (list => {
-            setProductos(list)
+        
+        list.then(item => {
+            setProductos(item)
+        }).catch(err  => {
+            console.log(err)
         })
-        return (() =>{
+
+        return (() => {
             setProductos([])
-        })        
+        })
+
     }, [])
+
     return (
-        <div className='ItemListContianer'>
-            <ItemList productos = {productos}/>
+        <div className="ItemListContainer" >
+            <ItemList  productos={productos}/>
         </div>
-    )
+    )    
+    
 }
 
 export default ItemListContainer

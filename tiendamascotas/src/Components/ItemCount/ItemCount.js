@@ -21,7 +21,7 @@ const Decremento =() => {
         <div>
             <button className='add' onClick={onAdd}>Agregrar Producto</button>
         </div>
-        <span>Stock: {stock}</span>
+        <span>Stock:10 {stock}</span>
         </div>
     )
 }

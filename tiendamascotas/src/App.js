@@ -7,24 +7,33 @@ import ItemCount from './Components/ItemCount/ItemCount';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
       <header className="App-header">
       <NavBar />
       <Switch>
-        
+        <Route exact path='/'>
         <ItemListContainer />
+        </Route>
+        <Route path='/category/:categoryId'>
+        <ItemListContainer />
+        </Route>
+        <Route path='/detail/:paramId'>
         <ItemDetailContainer />
+        </Route>
+        <Route path='/count'>
         <ItemCount />
-        </Switch>
+        </Route>
+      </Switch>
         
-                
+      <img src={'./logoCanhijo.png'}/>
+      <p>Fer_nandapp</p>
        
       </header>
       </BrowserRouter>
-      <img src={'./logoCanhijo.png'}/>
+
     </div>
   );
 }
