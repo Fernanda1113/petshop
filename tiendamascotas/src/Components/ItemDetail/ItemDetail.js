@@ -6,21 +6,21 @@ const ItemDetail = ({producto}) => {
         <article className='cardItem'>
             <header className='header'>
                 <h2 className='itemHeader'>
-                    {producto.name}
+                    {producto?.name}
                 </h2>
             </header>
             <picture>
-                <img src={producto.img} alt={producto.name} className='imgItem'/>
+                <img src={producto?.img} alt={producto?.name} className='imgItem'/>
             </picture>
             <section>
                 <p className='info'>
-                    Categoría: {producto.category}
+                    Categoría: {producto?.category}
                 </p>
                 <p className='info'>
-                    Descripción: {producto.description}
+                    Descripción: {producto?.description}
                 </p>
                 <p className='info'>
-                    Precio: {producto.price}
+                    Precio: {producto?.price}
                 </p>
             </section>
         </article>
