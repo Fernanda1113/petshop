@@ -3,8 +3,11 @@ import './Item.css'
 import { Link } from 'react-router-dom'
 
 const Item = ({producto}) => {
+    const handleClick = (evt) => {
+        evt.stopPropagation()
+    }
     return (
-        <article className='ItemCard'>
+        <article className='ItemCard' onClick={handleClick}>
             <header className='ItemContainer'>
             <h2 className='HeaderItem'>
                 {producto.name}
@@ -18,7 +21,7 @@ const Item = ({producto}) => {
                 Categoria: {producto.category}
             </p>
             <p className='Information'>
-                Valor: {producto.price}
+                Precio: {producto.price}
             </p>
             </section>
         <footer>

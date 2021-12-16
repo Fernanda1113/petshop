@@ -23,7 +23,7 @@ const ItemListContainer = ()=> {
     }, [])
 
     return (
-        <div className="ItemListContainer" >
+        <div className="ItemListContainer" onClick={() => console.log('Click en ILC')} >
             <ItemList  productos={productos}/>
         </div>
     )    
