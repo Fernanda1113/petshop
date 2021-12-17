@@ -1,8 +1,5 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    top: 0
+  h3{
+      font-size: 50px;
   }
   .navBar {
     display: flex;
@@ -15,26 +12,23 @@
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     z-index: 1;
-    justify-content: center;
-    
+    justify-content: center;    
 }
-.navbar-brand {
-    display: flex;
-    width: 80vw;
-    list-style-type: none;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
 .navBar Button {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 18px;
+    font-size: 23px;
     text-decoration: none;
     color: white;
     background-color: #AF9AB2;
+    margin: 20px;
 }
-
-.navBar{
-    margin: 15px;
+.CarritoContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.CategoryName{
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 50px
 }
