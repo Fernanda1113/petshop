@@ -27,7 +27,7 @@ const App = () => {
         </Route>
       </Switch>
         
-      <img src={'./logoCanhijo.png'}/>
+      <img src='./logoCanhijo.png' alt='logo de la pag'/>
       <p>Fer_nandapp</p>
        
       </header>
