@@ -1,7 +1,12 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
+import './ItemDetail.css'
 
 
 const ItemDetail = ({producto}) => {
+    const onAdd = () =>{
+        console.log('Producto Agregado')
+    }
     return(
         <article className='cardItem'>
             <header className='header'>
@@ -22,7 +27,9 @@ const ItemDetail = ({producto}) => {
                 <p className='info'>
                     Precio: {producto?.price}
                 </p>
+
             </section>
+            <ItemCount onAdd={onAdd}  />
         </article>
     )
 }

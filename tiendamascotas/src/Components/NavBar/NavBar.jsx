@@ -8,14 +8,6 @@ import {Link} from 'react-router-dom'
 const NavBar = () => {
     return (
         <div className="navBar">
-        {/*<li className="CategoryName"><Button color="secondary" variant="contained">Home</Button></li>
-        <li className="CategoryName"><Button color="secondary" variant="contained">Productos</Button></li>
-        <li className="CategoryName"><Button color="secondary" variant="contained">Descuentos</Button></li>
-        <li className="CategoryName"><Button color="secondary" variant="contained">Adopción</Button></li>
-        <div className="CarritoContainer">
-          
-          <Button color="secondary" variant="contained">Login</Button>
-    </div>  */}
     <Link to='/'><img src={'./logCanhijo96.png'}/></Link>
     
         <div>
