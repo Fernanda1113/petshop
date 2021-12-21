@@ -25,6 +25,7 @@ const App = () => {
         <Route path='/count'>
         <ItemCount />
         </Route>
+        
       </Switch>
         
       <img src='./logoCanhijo.png' alt='Logo de la pagina'/>

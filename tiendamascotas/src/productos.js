@@ -1,13 +1,13 @@
 const productos = [
-    {id:1, name:'Perfume', price: '5000', category: 'gatos', img: 'http://canamor.com/wp-content/uploads/2017/03/PERFUME-GATOS.jpg'},
-    {id:2, name:'Juguete', price: '7000', category: 'perros', img: 'https://m.media-amazon.com/images/I/71mfLrszjdL._AC_SX466_.jpg'},
-    {id:3, name:'Alpiste', price: '2000', category: 'aves', img: 'https://amigofiel.com.co/900-thickbox_default/alpiste.jpg'}
+    {id:1, name:'Perfume', price: '5000', category: 'gatos', description: 'Perfume para gato' , img: 'http://canamor.com/wp-content/uploads/2017/03/PERFUME-GATOS.jpg'},
+    {id:2, name:'Juguete', price: '7000', category: 'perros', description: 'Juguete para perro' , img: 'https://m.media-amazon.com/images/I/71mfLrszjdL._AC_SX466_.jpg'},
+    {id:3, name:'Alpiste', price: '2000', category: 'aves', description: 'Comida para ave' , img: 'https://amigofiel.com.co/900-thickbox_default/alpiste.jpg'}
 ]
 
 const categorias = [
-    {id:'gatos',description:'Perfume de gato'},
-    {id:'perros',description:'Juguete de perro'},
-    {id:'aves',description:'Comida de aves'}
+    {id:'gatos', description:'Perfume de gato'},
+    {id:'perros', description:'Juguete de perro'},
+    {id:'aves', description:'Comida de aves'}
 ]
 
 export const getProductos = () => {
