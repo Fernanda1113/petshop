@@ -6,7 +6,7 @@ import { getProductos } from '../../productos'
 
 const ItemListContainer = ()=> {
     const [productos, setProductos] = useState([])
-
+    
     useEffect(() => {
         const list = getProductos()
         
