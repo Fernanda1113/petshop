@@ -1,11 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './NavBar.css'
-import Button from '@mui/material/IconButton'
 import CartWidget from '../CartWidget/CartWidget'
-import {Link} from 'react-router-dom'
-
+import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
+  const [links, setLinks] = useState([
+      {nombre: 'Somos CanHijos', url: '/somosCanHijos'}, 
+      {nombre: 'Juguetes', url: '/juguetes/perro'}, 
+      {nombre: 'Contacto', url: '/contacto'}
+    ])
+  
+  return(
+      <header >
+          <nav className="itNavbar">
+              <NavLink to='/' className="lgNavbar">
+              <img src={'./logCanhijo96.png'}/></NavLink>
+ 
+              <ul className="mnNavbar">
+                  {links.map((link, i) => {
+                  return (<li  key={i}><NavLink className="lkNavbar" to={link.url}>{link.nombre}</NavLink></li>)
+                  })}
+                  <CartWidget/>
+              </ul>
+          </nav>
+      </header>
+      
+  )
+}
+
+
+{/*const NavBar = () => {
     return (
         <div className="navBar">
     <Link to='/'><img src={'./logCanhijo96.png'}/></Link>
@@ -21,6 +45,6 @@ const NavBar = () => {
         <CartWidget /> 
       </div>
     )
-}
+}*/}
 
 export default NavBar

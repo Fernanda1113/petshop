@@ -1,40 +1,28 @@
-.ItemCard{
-    width: 161px;
-    padding: 1px;
-    margin: 6px;
-    font-size: 10px;
-    display: inline-block;
-    background-color: #0c64e98f;
-    border: 3px solid #9e70e7;
-    border-radius: 10px;
-}
-.ImgItem{
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        object-position: center;
+.pdCard{
+    background: #797596;
+    box-shadow: 0 4px 8px 0 rgba(11, 29, 81, 1);
+    max-width: 300px;
+    margin: auto;
+    display: block;
+    text-align: center;
 }
 
-.ItemContainer{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    border-radius: 25px;
+h3{
+    color: #0B1D51;
 }
-.HeaderItem{
-    display: flex;
-    justify-content: center;
-}
-
-.Information{
+p{
+    padding: 10px 0;
     font-size: 16px;
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
+    color: #fff;           
 }
 
-.buttonSeeProduct{
-    margin-bottom: 10px;
-    font-size: 16px;
-    background-color: #0c64e980;
-    text-decoration: none;
+button {
+    padding: 12px;
+    color: #fff;
+    background-color: #0B1D51;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
 }

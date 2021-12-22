@@ -1,4 +1,4 @@
-.ItemCard{
+.cardPdDetail{
     width: 161px;
     padding: 1px;
     margin: 6px;
@@ -15,26 +15,3 @@
     object-position: center;
 }
 
-.ItemContainer{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    border-radius: 25px;
-}
-.HeaderItem{
-    display: flex;
-    justify-content: center;
-}
-
-.Information{
-    font-size: 16px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.buttonSeeProduct{
-    margin-bottom: 10px;
-    font-size: 16px;
-    background-color: #0c64e980;
-    text-decoration: none;
-}
