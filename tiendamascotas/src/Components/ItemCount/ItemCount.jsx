@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ItemCount.css'
 
-const ItemCount = ({stock, initial, count, increase, decrease, onAdd}) =>{
+const ItemCount = ({stocks,  initial, onAdd}) =>{
+    const [count, setCount] = useState(initial)
+    const [stock, setSotck] = useState(stocks)
+   
+    const increase = () => { 
+        if(count < stocks){
+            setCount(count + 1)
+            setSotck(stock - 1)
+            console.log(count)
+        }
+        
+    }
+
+    const decrease = () => { 
+        if(count > initial){
+            setCount(count - 1)
+            setSotck(stock + 1)
+        }
+        
+    }
+
+    onAdd(count)
 
     return(
         <div className="cardCount">
@@ -11,34 +32,11 @@ const ItemCount = ({stock, initial, count, increase, decrease, onAdd}) =>{
               <div className="contador">{count}</div>
               <button className="mas" onClick={increase} abled={count === stock}>+</button>
             </div>
-            <button className="_btn product-add" onClick={onAdd}>Agregar al Carrito</button>
+            <button className="add" onClick={onAdd}>Agregar al Carrito</button>
 
         </div>
     )
 }
 
-{/*const ItemCount = ({onAdd, stock}) => {
-    const[counter, setCounter] = useState(1);
-const Incremento =() => {
-    if(counter < 10)
-    setCounter(counter + 1);
-}
-const Decremento =() => {
-    if(counter > 1)
-    setCounter(counter -1);
-}
 
-    return (
-        <div>
-            <span>{counter}</span>
-            <button className='menos' onClick={Decremento}> </button>
-            <button className='mas' onClick={Incremento}> <svg data-testid="AddCircleIcon"></svg> </button>     
-        <div>
-            <button className='add' onClick={onAdd}>Agregrar Producto</button>
-        </div>
-        <span>Stock:10 {stock}</span>
-        </div>
-    )
-}
-*/}
 export default ItemCount

@@ -6,7 +6,8 @@ import {NavLink} from 'react-router-dom'
 const NavBar = () => {
   const [links, setLinks] = useState([
       {nombre: 'Somos CanHijos', url: '/somosCanHijos'}, 
-      {nombre: 'Juguetes', url: '/juguetes/perro'}, 
+      {nombre: 'PerrHijos', url: '/category/perrhijos'},
+      {nombre: 'GatHijos', url: '/category/gathijos'},
       {nombre: 'Contacto', url: '/contacto'}
     ])
   
@@ -14,8 +15,8 @@ const NavBar = () => {
       <header >
           <nav className="itNavbar">
               <NavLink to='/' className="lgNavbar">
-              <img src={'./logCanhijo96.png'}/></NavLink>
- 
+              <img src={'./logCanhijo96.png'} alt={'logo'}/>
+              </NavLink> 
               <ul className="mnNavbar">
                   {links.map((link, i) => {
                   return (<li  key={i}><NavLink className="lkNavbar" to={link.url}>{link.nombre}</NavLink></li>)
@@ -27,24 +28,4 @@ const NavBar = () => {
       
   )
 }
-
-
-{/*const NavBar = () => {
-    return (
-        <div className="navBar">
-    <Link to='/'><img src={'./logCanhijo96.png'}/></Link>
-    
-        <div>
-          <h3>CanHijos</h3>
-        </div>
-        <div className='categorias'>
-          <Link to='/' className="CategoryName"><Button color="secondary">Productos</Button></Link>
-          <Link to='/detail/:detailId' className="CategoryName"><Button color="secondary">Detalles</Button></Link>
-          <Link to='/count/:countId' className="CategoryName"><Button color="secondary">Contador</Button></Link>
-        </div>
-        <CartWidget /> 
-      </div>
-    )
-}*/}
-
 export default NavBar

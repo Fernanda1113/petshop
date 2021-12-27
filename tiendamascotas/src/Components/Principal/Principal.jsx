@@ -4,6 +4,7 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import {Switch, Route} from "react-router-dom"
 import Inicio from '../Inicio/Inicio'
 import SomosCH from '../SomosCH/SomosCH';
+import Cart from '../Cart/Cart'
 
 const Principal = ({greeting}) => {
 
@@ -19,11 +20,11 @@ const Principal = ({greeting}) => {
                     <SomosCH />
                 </Route>
 
-                <Route path="/juguetes">
+                <Route path="/category/:categoryName?">
                     <ItemListContainer/>
                 </Route>
 
-                <Route exact path = "/item/:productoId">
+                <Route exact path = "/item/:productId">
                     <ItemDetailContainer />
                  </Route>
                 
@@ -31,8 +32,8 @@ const Principal = ({greeting}) => {
                     
                 </Route>
 
-                <Route path="/cart">
-                    
+                <Route path="/Cart">
+                    <Cart/>
                 </Route>
 
             </Switch>

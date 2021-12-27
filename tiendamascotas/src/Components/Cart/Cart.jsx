@@ -1,46 +1,65 @@
 import React from 'react';
-import './cart.css'
+import './Cart.css'
 import {Link} from 'react-router-dom'
 import useCartContext from '../../Context/CartContext'
 
 const Cart = () => {
-    const {products, removeItem} = useCartContext()
+    const {products, removeItem, totalProductsPrice, isInCart} = useCartContext()
+    
 
     const handleRemove = (i) => {
         removeItem(i.id)
-    } 
-   
+    }
+    
+    console.log(isInCart)
+     
     return(
         <section className="cart">
-            <div className="heading cf">
+            <div className="headCart">
                 <h2>Carrito de Compras</h2>
                 <Link to="/" exact>
-                    <button className = "continue">Continuar Comprando</button>
+                    <button className = "continueCart">Continuar Compra</button>
                 </Link>
             </div>
-            <div className="shopping-cart">
+            <div className="compraCart">
                 
                 {products.map((item) => (
-                    <div className="product">
-                        <div className="product-image">
+                    <div className="productoCart">
+                        <div className="cartImg">
                             <img src={item.img} alt={item.id}/>
                         </div>
-                        <div className="product-details">{item.name}</div> 
-                        <div className="product-quantity">
+                        <div className="productoCartDetail">{item.name}</div> 
+                        <div className="cartContador">
                             <input type="text" placeholder={item.quantity}/>
                         </div>
-                        <div className="product-price">{item.price}</div>
-                        <div className="product-removal">
-                            <button class="remove-product" onClick={()=>handleRemove(item)}>
-                                <button>X</button>
-                            </button>
+                        <div className="cartPrice">{item.price}</div>
+                        <div className="cartRemoval">
+                            <button class="removalCart" onClick={()=>handleRemove(item)}>X</button>
                         </div>
-                        <div className="product-line-price">XXX</div>
+                        <div className="productoCartPrice">{item.quantity*item.price}</div>
                     </div>
                     )
                 )}
 
             </div>
+
+            {isInCart ?
+                <div className="cartTotal" >
+                    <div class="cartTotalItem">
+                        <label>Subtotal</label>
+                        <div class="cartValue">{totalProductsPrice()}</div>
+                    </div>
+                    <div class="cartTotalItem">
+                        <label>Costo de envío</label>
+                        <div class="cartValue">5000</div>
+                    </div>
+                    <div class="cartTotalItem">
+                        <label>Total a Pagar</label>
+                        <div class="cartValue">{totalProductsPrice() + 5000}</div>
+                    </div>
+                </div>
+                : "...No hay productos agregados al Carrito..."
+            }
         </section>
 
     )
