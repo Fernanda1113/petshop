@@ -2,27 +2,20 @@ import React, {useState} from 'react';
 import './ItemCount.css'
 
 const ItemCount = ({stocks,  initial, onAdd}) =>{
-    const [count, setCount] = useState(initial)
-    const [stock, setSotck] = useState(stocks)
+const [count, setCount] = useState(initial)
    
-    const increase = () => { 
-        if(count < stocks){
-            setCount(count + 1)
-            setSotck(stock - 1)
-            console.log(count)
-        }
-        
+const increase = () => { 
+    if(count < stocks){
+        setCount(count + 1)       
     }
+}
 
-    const decrease = () => { 
-        if(count > initial){
-            setCount(count - 1)
-            setSotck(stock + 1)
-        }
-        
+const decrease = () => { 
+    if(count > initial){
+        setCount(count - 1)
     }
-
-    onAdd(count)
+}
+onAdd(count)
 
     return(
         <div className="cardCount">

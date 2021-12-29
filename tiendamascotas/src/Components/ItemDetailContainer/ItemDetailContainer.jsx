@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
-import Products from '../../productos';
+//import Products from '../../productos';
 import ItemDetail from '../ItemDetail/ItemDetail' 
-import { getFirestore } from '../Firebase/Firebase'
+import { getFirestore } from '../Firebase/firebase'
 
 const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(false);
@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
         const getItem = db.collection("ItemCollection").doc(productId)
 
         getItem.get().then((querySnapshot) => {
-            setItem(querySnapshot.data())
+            setItem({id:querySnapshot.id, ...querySnapshot.data()})
             setLoading(false) 
         })
         .catch((e) => {console.log(e)})

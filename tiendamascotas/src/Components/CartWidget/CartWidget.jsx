@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 
 
 const CartWidget = () => {
-     const {cartWidgetCount, isInCart} = useCartContext()
+     const {cartWidgetCount, isInCart} = useCartContext;
    
         return(
             <>
