@@ -23,7 +23,7 @@ onAdd(count)
             <div className="cardBajo">
               <button className="menos" onClick={decrease} abled={count === initial} >-</button>
               <div className="contador">{count}</div>
-              <button className="mas" onClick={increase} abled={count === stock}>+</button>
+              <button className="mas" onClick={increase} abled={count === stocks}>+</button>
             </div>
             <button className="add" onClick={onAdd}>Agregar al Carrito</button>
 

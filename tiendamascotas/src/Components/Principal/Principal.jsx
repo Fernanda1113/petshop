@@ -27,10 +27,6 @@ const Principal = ({greeting}) => {
                 <Route exact path = "/item/:productId">
                     <ItemDetailContainer />
                  </Route>
-                
-                <Route path="/contacto">
-                    
-                </Route>
 
                 <Route path="/Cart">
                     <Cart/>

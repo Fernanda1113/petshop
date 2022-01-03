@@ -7,22 +7,19 @@ import {Link} from 'react-router-dom'
 
 
 const CartWidget = () => {
-     const {cartWidgetCount, isInCart} = useCartContext;
+     const {cartWidgetCount} = useCartContext;
    
         return(
-            <>
-            {isInCart ? 
-                <Link to= {'/cart'} className='cartWidget'>
-                <div className="cartIcon">
+        <>
+        <Link to= {'/cart'} className='cartWidget'>
+            <div className="cartIcon">
         <IconButton color="primary" className="Carrito" aria-label="add to shopping cart" size="large">
             <ShoppingCartIcon />
         </IconButton>
-        <span className="cartItem">{cartWidgetCount()}</span>
+        <span className="cartItem">{cartWidgetCount}</span>
                 </div>
-                </Link>
-                : null
-            }
-            </>
+        </Link>
+        </>
         )
 }
 

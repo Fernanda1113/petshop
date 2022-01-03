@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css'
 import { Link } from 'react-router-dom'
 import useCartContext from '../../Context/CartContext'
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 import "firebase/firestore"
 import { getFirestore } from '../Firebase/firebase'
 import Formulario from '../Formulario/Formulario'
@@ -25,20 +25,31 @@ const Cart = () => {
         const db = getFirestore()
         const orders = db.collection('order')
 
-        const newOrder = {
+    const newOrder = {
             buyer,
             products,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
             total: totalProductsPrice()
-        }
+    }
 
         orders.add(newOrder).then(({ id }) => {
             setOrderId(id)
             setConfirmation(true)
-            cleanListCart()
         }
         ).catch((e) => { console.log(e) })
 
+    const Itemscollection = db.collection("ItemCollection")
+    const batch = getFirestore().batch()
+
+    products.forEach( p => {
+        batch.update(Itemscollection.doc(p.id),{stock:p.stock - p.quantity})
+    })
+        batch.commit()
+          .then(()=>{
+            console.log("Salio bien")
+            cleanListCart()
+        })
+        .catch(err=>console.log(err))
     }
 
     console.log("Confirmacion", confirmation)
@@ -53,7 +64,6 @@ const Cart = () => {
                         <button className="continueCart">Continuar Comprando</button>
                     </Link>
                 </div>
-
             </div>
         )
     } else if (orderId && confirmation) {
@@ -70,33 +80,40 @@ const Cart = () => {
     }
 
 return (
-    <section className="cart">
+<section className="cart">
         <div className="headCart">
             <h2>Carrito de Compras</h2>
             <Link to="/" exact>
                 <button className="continueCart">Continuar Compra</button>
             </Link>
         </div>
-        <div className="compraCart">
-
-    {products.map((item) => (
-        <div className="productoCart">
-            <div className="cartImg">
-                <img src={item.img} alt={item.id} />
+    <div className="compraCart">
+        {products.map((item) => (
+    <div className="productoCart">
+                <div className="cartImg">
+                    <img src={item.img} alt={item.id} />
             </div>
-        <div className="productoCartDetail">{item.name}</div>
-        <div className="cartContador">
-            <input type="text" placeholder={item.quantity} />
-        </div>
-       <div className="cartPrice">{item.price}</div>
+    <div className="productoCartDetail">
+            <h3>{item.name}</h3>
         <div className="cartRemoval">
             <button class="removalCart" onClick={() => handleRemove(item)}>X</button>
         </div>
-        <div className="productoCartPrice">{item.quantity * item.price}</div>
+    </div>
+    <div className="productoCartPrice">
+        <label htmlFor="price">Precio</label>
+        <span className="price">COP ${item.price}</span>
+    </div>
+    <div className="cartContador">
+        <label htmlFor="quantity">Cantidad</label>
+        <span className="contador">{item.quantity}</span>
+    </div>
+    <div className="cartPrice">
+       <label htmlFor="total">Total</label>
+        <span className="total">COP ${item.quantity*item.price}</span>
+    </div>
     </div>
     )    
-    )}
-
+)}
 </div>
     <div className="cartTotal" >
         <div class="cartTotalItem">
@@ -109,10 +126,10 @@ return (
         </div>
         <div class="cartTotalItem">
             <label>Total a Pagar</label>
-            <div class="cartValue">{totalProductsPrice() + 5000}</div>
+            <div class="cartValue">{totalProductsPrice() + 5300}</div>
         </div>
         <div className="cartTotalItem">
-            <button className ="checkout" onClick={handleFinalize}>Iniciar Compra</button>
+            <button className ="checkout" onClick={handleFinalize}>Inicia tu Compra</button>
         </div>                    
     </div>
     {showForm ? <Formulario createOrder={createOrder}/> : null}

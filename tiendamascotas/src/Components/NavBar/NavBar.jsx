@@ -7,12 +7,11 @@ const NavBar = () => {
   const [links, setLinks] = useState([
       {nombre: 'Somos CanHijos', url: '/somosCanHijos'}, 
       {nombre: 'PerrHijos', url: '/category/perrhijos'},
-      {nombre: 'GatHijos', url: '/category/gathijos'},
-      {nombre: 'Contacto', url: '/contacto'}
+      {nombre: 'GatHijos', url: '/category/gathijos'}
     ])
   
   return(
-      <header >
+      <header>
           <nav className="itNavbar">
               <NavLink to='/' className="lgNavbar">
               <img src={'./logCanhijo96.png'} alt={'logo'}/>
@@ -24,8 +23,7 @@ const NavBar = () => {
                   <CartWidget/>
               </ul>
           </nav>
-      </header>
-      
+      </header>      
   )
 }
 export default NavBar
