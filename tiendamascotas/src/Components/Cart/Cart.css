@@ -1,0 +1,33 @@
+.cart{
+    font-family: 'Bellota', cursive;
+    font-weight: 100;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headCart{
+    display: flex;
+    justify-content: space-between;
+    color: #0B1D51;
+    padding: 10px 0px ;
+    border-bottom: 1.5px solid #BBADA0;
+    margin-bottom: 15px;
+}
+
+.continueCart{
+    border: none;
+    background: #0B1D51;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    font-family: 'Bellota', cursive;
+    padding: 10px;
+}
+.continueCart:hover{
+    background: #A1869E;
+}
+.validation{
+    color: #25d366;
+}

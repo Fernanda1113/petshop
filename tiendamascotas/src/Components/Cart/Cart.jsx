@@ -8,7 +8,7 @@ import { getFirestore } from '../Firebase/firebase'
 import Formulario from '../Formulario/Formulario'
 
 const Cart = () => {
-    const { products, removeItem, totalProductsPrice, cleanListCart } = useCartContext()
+    const {products, removeItem, totalProductsPrice, cleanListCart} = useCartContext;
     const [showForm, setShowForm] = useState(false)
     const [orderId, setOrderId] = useState("")
     const [confirmation, setConfirmation] = useState(false)
@@ -32,11 +32,11 @@ const Cart = () => {
             total: totalProductsPrice()
     }
 
-        orders.add(newOrder).then(({ id }) => {
+        orders.add(newOrder).then(({id}) => {
             setOrderId(id)
             setConfirmation(true)
         }
-        ).catch((e) => { console.log(e) })
+        ).catch((e) => {console.log(e)})
 
     const Itemscollection = db.collection("ItemCollection")
     const batch = getFirestore().batch()
@@ -52,7 +52,7 @@ const Cart = () => {
         .catch(err=>console.log(err))
     }
 
-    console.log("Confirmacion", confirmation)
+    console.log("Confirmación", confirmation)
     console.log("orderId", orderId)
 
     if (products.length === 0 && orderId === "") {

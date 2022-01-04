@@ -3,14 +3,13 @@
     margin: 0;
     padding: 0;
     top: 0;
-    text-decoration: none;
   }
-  .navBar {
+  .itNavbar {
     display: flex;
     align-items: center;
     background-color: #0c64e98f;
-    width: 100vw;
-    height: 80px;
+    width: 96vw;
+    height: 88px;
     color: white;
     box-shadow: 0px 1px 10px rgba(0,0,0,1);
     border-bottom-left-radius: 30px;
@@ -19,7 +18,7 @@
     justify-content: center;
     
 }
-.navbar-brand {
+.lgNavbar{
     display: flex;
     width: 80vw;
     list-style-type: none;
@@ -28,7 +27,7 @@
     
 }
 
-.navBar Button {
+.itNavbar Button {
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     text-decoration: none;
@@ -36,13 +35,18 @@
     background-color: #AF9AB2;
 }
 
-.navBar{
-    margin: 15px;
-}
-.categorias{
-    text-decoration: none;
+.mnNavbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 50vw;
+    margin-right: 153px;
 }
 
-h3{
-    font-size: 55px;
+.lkNavbar{
+    color:#0B1D51;
+    text-decoration: none;
+    padding: 10px 17px;
 }

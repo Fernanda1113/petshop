@@ -1,12 +1,14 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter} from 'react-router-dom'
 import NavBar from "./Components/NavBar/NavBar"
 import Principal from './Components/Principal/Principal'
+import {StoreProvider} from './Context/CartContext'
 
 
 const App = () => {
   return (
-    <div className="App">
+    <StoreProvider>
       <BrowserRouter>
       <header className="App-header">
       <NavBar />
@@ -18,7 +20,7 @@ const App = () => {
       </header>
       </BrowserRouter>
 
-    </div>
+    </StoreProvider>
   );
 }
 
