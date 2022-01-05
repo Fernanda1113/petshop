@@ -8,7 +8,7 @@ import { getFirestore } from '../Firebase/firebase'
 import Formulario from '../Formulario/Formulario'
 
 const Cart = () => {
-    const {products, removeItem, totalProductsPrice, cleanListCart} = useCartContext;
+    const { products, removeItem, totalProductsPrice, cleanListCart } = useCartContext;
     const [showForm, setShowForm] = useState(false)
     const [orderId, setOrderId] = useState("")
     const [confirmation, setConfirmation] = useState(false)
@@ -25,31 +25,31 @@ const Cart = () => {
         const db = getFirestore()
         const orders = db.collection('order')
 
-    const newOrder = {
+        const newOrder = {
             buyer,
             products,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
             total: totalProductsPrice()
-    }
+        }
 
-        orders.add(newOrder).then(({id}) => {
+        orders.add(newOrder).then(({ id }) => {
             setOrderId(id)
             setConfirmation(true)
         }
-        ).catch((e) => {console.log(e)})
+        ).catch((e) => { console.log(e) })
 
-    const Itemscollection = db.collection("ItemCollection")
-    const batch = getFirestore().batch()
+        const Itemscollection = db.collection("ItemCollection")
+        const batch = getFirestore().batch()
 
-    products.forEach( p => {
-        batch.update(Itemscollection.doc(p.id),{stock:p.stock - p.quantity})
-    })
-        batch.commit()
-          .then(()=>{
-            console.log("Salio bien")
-            cleanListCart()
+        products.forEach(p => {
+            batch.update(Itemscollection.doc(p.id), { stock: p.stock - p.quantity })
         })
-        .catch(err=>console.log(err))
+        batch.commit()
+            .then(() => {
+                console.log("Salio bien")
+                cleanListCart()
+            })
+            .catch(err => console.log(err))
     }
 
     console.log("Confirmación", confirmation)
@@ -59,7 +59,7 @@ const Cart = () => {
         return (
             <div className="cart">
                 <div className="headCart">
-                    <h3>...No hay productos agregados al Carrito...</h3>
+                    <h3>...No hay productos en el Carrito...</h3>
                     <Link to="/" exact>
                         <button className="continueCart">Continuar Comprando</button>
                     </Link>
@@ -79,62 +79,61 @@ const Cart = () => {
         )
     }
 
-return (
-<section className="cart">
-        <div className="headCart">
-            <h2>Carrito de Compras</h2>
-            <Link to="/" exact>
-                <button className="continueCart">Continuar Compra</button>
-            </Link>
-        </div>
-    <div className="compraCart">
-        {products.map((item) => (
-    <div className="productoCart">
-                <div className="cartImg">
-                    <img src={item.img} alt={item.id} />
+    return (
+        <section className="cart">
+            <div className="headCart">
+                <h2>Carrito de Compras</h2>
+                <Link to="/" exact>
+                    <button className="continueCart">Continuar Compra</button>
+                </Link>
             </div>
-    <div className="productoCartDetail">
-            <h3>{item.name}</h3>
-        <div className="cartRemoval">
-            <button class="removalCart" onClick={() => handleRemove(item)}>X</button>
-        </div>
-    </div>
-    <div className="productoCartPrice">
-        <label htmlFor="price">Precio</label>
-        <span className="price">COP ${item.price}</span>
-    </div>
-    <div className="cartContador">
-        <label htmlFor="quantity">Cantidad</label>
-        <span className="contador">{item.quantity}</span>
-    </div>
-    <div className="cartPrice">
-       <label htmlFor="total">Total</label>
-        <span className="total">COP ${item.quantity*item.price}</span>
-    </div>
-    </div>
-    )    
-)}
-</div>
-    <div className="cartTotal" >
-        <div class="cartTotalItem">
-            <label>Subtotal</label>
-            <div class="cartValue">{totalProductsPrice()}</div>
-        </div>
-         <div class="cartTotalItem">
-            <label>Costo de envío</label>
-            <div class="cartValue">5000</div>
-        </div>
-        <div class="cartTotalItem">
-            <label>Total a Pagar</label>
-            <div class="cartValue">{totalProductsPrice() + 5300}</div>
-        </div>
-        <div className="cartTotalItem">
-            <button className ="checkout" onClick={handleFinalize}>Inicia tu Compra</button>
-        </div>                    
-    </div>
-    {showForm ? <Formulario createOrder={createOrder}/> : null}
-</section>
-
+            <div className="compraCart">
+                {products.map((item) => (
+                    <div className="productoCart">
+                        <div className="cartImg">
+                            <img src={item.img} alt={item.id} />
+                        </div>
+                        <div className="productoCartDetail">
+                            <h3>{item.name}</h3>
+                            <div className="cartRemoval">
+                                <button class="removalCart" onClick={() => handleRemove(item)}>X</button>
+                            </div>
+                        </div>
+                        <div className="productoCartPrice">
+                            <label htmlFor="price">Precio</label>
+                            <span className="price">COP ${item.price}</span>
+                        </div>
+                        <div className="cartContador">
+                            <label htmlFor="quantity">Cantidad</label>
+                            <span className="contador">{item.quantity}</span>
+                        </div>
+                        <div className="cartPrice">
+                            <label htmlFor="total">Total</label>
+                            <span className="total">COP ${item.quantity * item.price}</span>
+                        </div>
+                    </div>
+                )
+                )}
+            </div>
+            <div className="cartTotal" >
+                <div class="cartTotalItem">
+                    <label>Subtotal</label>
+                    <div class="cartValue">{totalProductsPrice()}</div>
+                </div>
+                <div class="cartTotalItem">
+                    <label>Costo de envío</label>
+                    <div class="cartValue">5000</div>
+                </div>
+                <div class="cartTotalItem">
+                    <label>Total a Pagar</label>
+                    <div class="cartValue">{totalProductsPrice() + 5300}</div>
+                </div>
+                <div className="cartTotalItem">
+                    <button className="checkout" onClick={handleFinalize}>Inicia tu Compra</button>
+                </div>
+            </div>
+            {showForm ? <Formulario createOrder={createOrder} /> : null}
+        </section>
     )
 }
 export default Cart;

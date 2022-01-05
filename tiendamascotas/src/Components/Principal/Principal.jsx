@@ -1,19 +1,19 @@
 import React from 'react'
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
-import {Switch, Route} from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 import Inicio from '../Inicio/Inicio'
 import SomosCH from '../SomosCH/SomosCH';
 import Cart from '../Cart/Cart'
 
-const Principal = ({greeting}) => {
+const Principal = ({ greeting }) => {
 
-    return(
+    return (
         <principal>
             <Switch>
 
                 <Route path="/" exact>
-                    <Inicio greeting="HOLA CANHIJO!"/>
+                    <Inicio greeting="HOLA CANHIJO!" />
                 </Route>
 
                 <Route path="/somosCanhijos">
@@ -21,15 +21,15 @@ const Principal = ({greeting}) => {
                 </Route>
 
                 <Route path="/category/:categoryName?">
-                    <ItemListContainer/>
+                    <ItemListContainer />
                 </Route>
 
-                <Route exact path = "/item/:productId">
+                <Route exact path="/item/:productId">
                     <ItemDetailContainer />
-                 </Route>
+                </Route>
 
                 <Route path="/Cart">
-                    <Cart/>
+                    <Cart />
                 </Route>
 
             </Switch>
