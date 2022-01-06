@@ -9,7 +9,7 @@ import Cart from '../Cart/Cart'
 const Principal = ({ greeting }) => {
 
     return (
-        <principal>
+        <Principal>
             <Switch>
 
                 <Route path="/" exact>
@@ -34,7 +34,7 @@ const Principal = ({ greeting }) => {
 
             </Switch>
 
-        </principal>
+        </Principal>
     )
 }
 
