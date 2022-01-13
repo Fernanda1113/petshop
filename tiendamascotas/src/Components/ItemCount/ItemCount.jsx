@@ -25,7 +25,6 @@ onAdd(count)
               <div className="contador">{count}</div>
               <button className="mas" onClick={increase} abled={count === stocks}>+</button>
             </div>
-            <button className="add" onClick={onAdd}>Agregar al Carrito</button>
 
         </div>
     )

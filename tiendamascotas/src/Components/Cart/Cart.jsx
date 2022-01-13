@@ -55,7 +55,7 @@ const Cart = () => {
     console.log("Confirmación", confirmation)
     console.log("orderId", orderId)
 
-    if (products.length === 0 && orderId === "") {
+    if (products.length  === 0 && orderId === "") {
         return (
             <div className="cart">
                 <div className="headCart">
