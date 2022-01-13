@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-//import Products from '../../productos';
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { getFirestore } from '../Firebase/firebase'
+import { getFirestore } from '../Firebase/Firebase'
 
 const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(false);

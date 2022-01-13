@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import useCartContext from '../../Context/CartContext'
 import firebase from "firebase/compat/app"
 import "firebase/firestore"
-import { getFirestore } from '../Firebase/firebase'
+import { getFirestore } from '../Firebase/Firebase'
 import Formulario from '../Formulario/Formulario'
 
 const Cart = () => {

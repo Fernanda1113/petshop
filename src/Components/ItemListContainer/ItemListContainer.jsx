@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
-//import Products from "../../productos";
 import { useParams } from 'react-router-dom';
-import { getFirestore } from '../Firebase/firebase'
+import { getFirestore } from '../Firebase/Firebase'
 
 const ItemListContainer = () => {
 
@@ -14,9 +13,9 @@ const ItemListContainer = () => {
         let itemCollection
 
         if (categoryName){
-            itemCollection = db.collection("ItemCollection").where("category", "==", categoryName)
+            itemCollection = db.collection("items").where("category", "==", categoryName)
         } else{
-            itemCollection = db.collection("ItemCollection")
+            itemCollection = db.collection("items")
         }
         
         const itemCollectionQuery = itemCollection.get()
