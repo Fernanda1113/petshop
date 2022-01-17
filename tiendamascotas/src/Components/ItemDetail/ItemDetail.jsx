@@ -23,7 +23,7 @@ return (
         
     <div className="productDetail">
         <div className="imgDetail">
-            <img src={item.img} alt={item.id}/>
+            <img className='image' src={item.img} alt={item.id}/>
         </div>
         <div className="infoDetail">
             <h3>{item.name}</h3>

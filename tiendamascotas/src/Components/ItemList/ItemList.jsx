@@ -8,8 +8,7 @@ const ItemList =({list}) => {
             {list.map(product => 
                 <Item key={product.id} item={product}/>
             )}
-        </section>
-        
+        </section>        
     )
 }
 

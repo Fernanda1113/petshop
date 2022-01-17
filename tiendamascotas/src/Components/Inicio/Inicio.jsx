@@ -9,10 +9,8 @@ const Inicio= ({greeting}) => {
             <span>¡Bienvenido de nuevo!</span>
             </div>
             <ItemListContainer/>
-        </section>
-       
-    )
-    
+        </section>       
+    )    
 }
 
 export default Inicio

@@ -1,7 +1,7 @@
 import React, {createContext, useState, useContext} from 'react'
 
 const StoreContext = createContext()
-const useCartContext = () => useContext(StoreContext)
+const UseCartContext = () => useContext(StoreContext)
 
 
 export const StoreProvider = ({children}) =>{
@@ -50,4 +50,4 @@ export const StoreProvider = ({children}) =>{
     )
 
 }
-export default useCartContext
+export default UseCartContext

@@ -16,7 +16,6 @@ const decrease = () => {
     }
 }
 onAdd(count)
-
     return(
         <div className="cardCount">
             <h5>Cantidad:</h5>
@@ -25,7 +24,6 @@ onAdd(count)
               <div className="contador">{count}</div>
               <button className="mas" onClick={increase} abled={count === stocks}>+</button>
             </div>
-
         </div>
     )
 }

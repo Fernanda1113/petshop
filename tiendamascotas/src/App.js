@@ -14,7 +14,7 @@ const App = () => {
       <NavBar />
     <Principal />
         
-      <img src='./logoCanhijo.png' alt='Logo de la pagina'/>
+      <img  className='logo' src='./logoCanhijo.png' alt='Logo de la pagina'/>
       <p>Fer_nandapp</p>
        
       </header>

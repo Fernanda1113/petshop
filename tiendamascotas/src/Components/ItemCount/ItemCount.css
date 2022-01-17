@@ -1,10 +1,29 @@
-.card{
+.cardCount{
     max-width: 300px;
     border-radius: 5px;
-    display: block;
+    display: contents;
     margin-top: 20px;
-    margin-left: auto;
     margin-right: auto;
+    color: #0B1D51;
+}
+h5{
+    text-align: center;
+    padding: 10px 0px ;
+}
+p{
+    padding: 5px 0px;
+}
+.cardBajo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contador{
+    width: 15%;
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    padding: .35em .75em;
 }
 
 .mas {
@@ -14,6 +33,11 @@
     border-bottom: 2px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    width: 15%;
+    border: none;
+    background-color: transparent;
+    color:  #797596;
+    text-align: center;
 }
 
 .menos{
@@ -22,6 +46,16 @@
     padding-left: 11px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    text-align: left;
+    width: 15%;
+    border: none;
+    background-color: transparent;
+    color:  #797596;
+    text-align: center;
 }
 
 .add{

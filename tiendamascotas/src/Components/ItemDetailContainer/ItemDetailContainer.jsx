@@ -6,13 +6,13 @@ import { getFirestore } from '../Firebase/firebase'
 const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(false);
     const [item, setItem] = useState([]);
-
+    console.log(item);
     const {productId} = useParams();
 
     useEffect(() => {
 
         const db = getFirestore()
-        const getItem = db.collection("ItemCollection").doc(productId)
+        const getItem = db.collection("items").doc(productId)
 
         getItem.get().then((querySnapshot) => {
             setItem({id:querySnapshot.id, ...querySnapshot.data()})
