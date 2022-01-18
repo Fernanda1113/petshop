@@ -13,7 +13,8 @@
     grid-template-columns: repeat(1, 1fr);
 }
 .image{
-    width: 100%;
+    max-width: 301px;
+    max-height: 278px;
 }
 
 h3{
@@ -29,7 +30,7 @@ p{
 button {
     padding: 12px;
     color: #fff;
-    background-color: #0B1D51;
+    background-color: #12274c;
     text-align: center;
     cursor: pointer;
     width: 100%;

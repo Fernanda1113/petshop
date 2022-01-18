@@ -1,8 +1,7 @@
 .productDetail{
     margin-top: 50px;
-    font-size: 10px;
-    display: inline-block;
-    background-color: #0c64e98f;
+    display: table-caption;
+    background-color: #12274c;
     border: 3px solid #9e70e7;
     border-radius: 10px;
 }
@@ -14,7 +13,8 @@
     object-position: center;
 }
 .image{
-    width: 350px;
+    max-width: 301px;
+    max-height: 278px;
 }
 
 .infoDetail{
@@ -36,13 +36,12 @@
     border: none;
     padding: .5em .75em;
     text-align: center;
-    font-weight: 300;
     border-radius: 5px;
-    font-size: .875em;
+    margin: 1.5px;
     margin-top: 0.45rem;
     background-color: #797596;
     color: #ecf0f1;
-    width: 153px;
+    width: 147px;    
 }
 
 @media screen and (max-width: 768px) {
