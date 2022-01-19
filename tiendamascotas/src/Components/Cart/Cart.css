@@ -1,5 +1,5 @@
 .cart{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 100;
     width: 100%;
     max-width: 1200px;
@@ -9,8 +9,9 @@
 }
 .headCart{
     display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: space-between;
-    color: #0B1D51;
+    color: #0b5151;
     padding: 10px 0px ;
     border-bottom: 1.5px solid #BBADA0;
     margin-bottom: 15px;
@@ -22,7 +23,7 @@
     color: #fff;
     font-size: 16px;
     border-radius: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px;
 }
 .continueCart:hover{
@@ -55,18 +56,16 @@
     color: #797596;
     font-weight: bold;
 }
-.cartRemoval{
-    border: 0;
-    padding: 4px 8px;
-    background-color: #c66;
-    color: #fff;
-    border-radius: 3px;
+.cartRemoval button{
+    border: 2;
+    color: rgb(20, 216, 241);
+    border-radius: 10px;
 }
 .cartContador label{
     width: 30px;
     text-align: center;
     font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .cartTotalItem{
     float: right;
@@ -86,6 +85,6 @@
     color: #fff;
     font-size: 16px;
     border-radius: 10px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px;
 }

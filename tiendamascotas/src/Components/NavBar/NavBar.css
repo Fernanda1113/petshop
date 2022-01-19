@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 2px;
     padding: 0;
     top: 0;
   }
@@ -8,9 +8,10 @@
     display: flex;
     align-items: center;
     background-color: #0c64e98f;
-    width: 100vw;
+    width: 98vw;
     height: 88px;
     color: white;
+    font-size: 28px;
     box-shadow: 0px 1px 10px rgba(0,0,0,1);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -28,8 +29,8 @@
 }
 
 .itNavbar Button {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
     text-decoration: none;
     color: white;
     background-color: #AF9AB2;
@@ -48,5 +49,5 @@
 .lkNavbar{
     color:#0B1D51;
     text-decoration: none;
-    padding: 10px 17px;
+    padding: 10px 30px;
 }

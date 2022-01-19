@@ -2,15 +2,12 @@
     position: relative;
     background: #797596;
     box-shadow: 0 4px 8px 0 rgba(11, 29, 81, 1);
-    max-width: 300px;
-    margin: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-    flex-wrap: wrap;
     order: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
-    grid-template-columns: repeat(1, 1fr);
+    height: 480px;
 }
 .image{
     max-width: 301px;
@@ -18,23 +15,23 @@
 }
 
 h3{
-    color: #0B1D51;
+    color: #0b5151;
 }
 p{
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 17px 10px;
+    font-size: 17px;
     text-align: center;
     color: #fff;           
 }
 
 button {
-    padding: 12px;
+    padding: 10px;
     color: #fff;
     background-color: #12274c;
     text-align: center;
     cursor: pointer;
     width: 100%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
     cursor: pointer;
     width: 99%;

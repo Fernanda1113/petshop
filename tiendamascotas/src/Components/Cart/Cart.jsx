@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import './Cart.css'
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import OfflinePinIcon from '@mui/icons-material/OfflinePin';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import { Link } from 'react-router-dom'
 import useCartContext from '../../Context/CartContext'
 import firebase from "firebase/compat/app"
@@ -95,18 +102,21 @@ const createOrder = (buyer) => {
                         <div className="productoCartDetail">
                             <h3>{item.name}</h3>
                             <div className="cartRemoval">
-                                <button class="removalCart" onClick={() => handleRemove(item)}>X</button>
+                                <button class="removalCart" onClick={() => handleRemove(item)}><DeleteForeverIcon /></button>
                             </div>
                         </div>
                         <div className="productoCartPrice">
+                            <MonetizationOnIcon />
                             <label htmlFor="price">Precio: </label>
                             <span className="price">COP ${item.price}</span>
                         </div>
                         <div className="cartContador">
+                            <ProductionQuantityLimitsIcon />
                             <label htmlFor="quantity">Cantidad: </label>
                             <span className="contador">{item.quantity}</span>
                         </div>
                         <div className="cartPrice">
+                            <CardGiftcardIcon />
                             <label htmlFor="total">Total: </label>
                             <span className="total">COP ${item.quantity * item.price}</span>
                         </div>
@@ -116,14 +126,17 @@ const createOrder = (buyer) => {
             </div>
             <div className="cartTotal" >
                 <div className="cartTotalItem">
+                    <OfflinePinIcon />
                     <label>Subtotal: </label>
                     <div className="cartValue">{totalProductsPrice()}</div>
                 </div>
                 <div className="cartTotalItem">
+                    <LocalShippingIcon />
                     <label>Costo de envío:</label>
                     <div className="cartValue"> 5300</div>
                 </div>
                 <div className="cartTotalItem">
+                    <AccountBalanceWalletIcon />
                     <label>Total a Pagar: </label>
                     <div className="cartValue">{totalProductsPrice() + 5300}</div>
                 </div>

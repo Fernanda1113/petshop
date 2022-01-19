@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { BrowserRouter} from 'react-router-dom'
 import NavBar from "./Components/NavBar/NavBar"
 import Principal from './Components/Principal/Principal'
@@ -15,7 +17,7 @@ const App = () => {
     <Principal />
         
       <img  className='logo' src='./logoCanhijo.png' alt='Logo de la pagina'/>
-      <p>Fer_nandapp</p>
+      <p><InstagramIcon />Fer_nandapp <GitHubIcon /></p>
        
       </header>
       </BrowserRouter>
