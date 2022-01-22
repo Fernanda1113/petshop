@@ -10,11 +10,9 @@
     background-color: #0c64e98f;
     width: 98vw;
     height: 88px;
-    color: white;
     font-size: 28px;
     box-shadow: 0px 1px 10px rgba(0,0,0,1);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    margin-top:10px;
     z-index: 1;
     justify-content: center;
     
