@@ -1,0 +1,90 @@
+.cart{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headCart{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: space-between;
+    color: #0b5151;
+    padding: 10px 0px ;
+    border-bottom: 1.5px solid #BBADA0;
+    margin-bottom: 15px;
+}
+
+.continueCart{
+    border: none;
+    background: #0B1D51;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+.continueCart:hover{
+    background: #A1869E;
+}
+.validation{
+    color: #25d366;
+}
+.compraCart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.productoCart{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #D1C6AD;
+}
+.cartImg{
+    padding:0 10px ;
+}
+.image{
+    max-width: 301px;
+    max-height: 278px;
+    display: block;
+    padding:0 10px;
+}
+.productoCartDetail{
+    display: flex;
+    justify-content: space-between;
+    color: #797596;
+    font-weight: bold;
+}
+.cartRemoval button{
+    border: 2;
+    color: rgb(20, 216, 241);
+    border-radius: 10px;
+}
+.cartContador label{
+    width: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cartTotalItem{
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.cartValue{
+    float: right;
+    width: 21%;
+    text-align: right;
+}
+.checkout{
+    float: right;
+    border: none;
+    background: #797596;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}

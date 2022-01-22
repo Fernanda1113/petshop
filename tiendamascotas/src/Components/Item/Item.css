@@ -1,32 +1,44 @@
-.ItemCard{
-    width: 161px;
-    padding: 1px;
-    margin: 6px;
-    font-size: 10px;
-    background-color: #0c64e98f;
-    border: 3px solid #9e70e7;
-    border-radius: 10px;
+.ItemProducto{
+    position: relative;
+    background: #797596;
+    box-shadow: 0 4px 8px 0 rgba(11, 29, 81, 1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    order: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    height: 480px;
 }
-.ImgItem{
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        object-position: center;
+.image{
+    max-width: 301px;
+    max-height: 278px;
 }
 
-.ItemContainer{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    border-radius: 25px;
+h3{
+    color: #0b5151;
 }
-.HeaderItem{
-    display: flex;
-    justify-content: center;
+p{
+    padding: 17px 10px;
+    font-size: 17px;
+    text-align: center;
+    color: #fff;           
 }
 
-.Information{
-    font-size: 16px;
-    display: flex;
-    justify-content: space-around;
+button {
+    padding: 10px;
+    color: #fff;
+    background-color: #12274c;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    width: 99%;
+    font-size: 14px;
 }
+
+button :hover {
+    opacity: 0.7;
+  }
+

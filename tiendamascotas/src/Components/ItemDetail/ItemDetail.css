@@ -1,0 +1,64 @@
+.productDetail{
+    margin-top: 50px;
+    display: table-caption;
+    background-color: #12274c;
+    border: 3px solid #9e70e7;
+    border-radius: 10px;
+}
+
+.ImgItem{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.image{
+    max-width: 301px;
+    max-height: 278px;
+}
+
+.infoDetail{
+    margin: auto 0;
+}
+.cardDescription{
+    font-size: 16px;
+}
+.cardPrice{
+    font-size: 20px;
+    color: rgb(103, 114, 216);
+}
+.cardPrice:before{
+    content: 'COP $';
+}
+.btn{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    border: none;
+    padding: .5em .75em;
+    text-align: center;
+    border-radius: 5px;
+    margin: 1.5px;
+    margin-top: 0.45rem;
+    background-color: #797596;
+    color: #ecf0f1;
+    width: 147px;    
+}
+
+@media screen and (max-width: 768px) {
+    .productDetail {
+        display: block;
+    }
+    img{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .productDetail {
+        display: block;
+    }
+    img{
+        width:175px;
+    }
+}
+

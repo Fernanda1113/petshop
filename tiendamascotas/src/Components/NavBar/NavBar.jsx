@@ -1,34 +1,30 @@
-import React from 'react'
-import {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './NavBar.css'
-import Button from '@mui/material/IconButton'
 import CartWidget from '../CartWidget/CartWidget'
-import {getCategorias} from '../../productos'
-
+import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
-  const[categorias, setCategorias] = useState([])
-  useEffect(() =>{
-    const listaCategorias = getCategorias()
-    listaCategorias.then(cat => {
-      setCategorias(cat)
-    })
-    return () => {
-      setCategorias([])
-    }
-  }, [])
-    return (
-        <nav className="navBar">
-          <div>
-            <h3>CanHijos</h3>
-          </div>
-        <div className="CarritoContainer">
-        {categorias.map(c => <button key={c.id} className='CategoryName'>{c.description}</button>)}
-        </div> 
-          <CartWidget /> 
-        <Button color="secondary" variant="contained">Login</Button>        
-      </nav>
-    )
+  const [links, setLinks] = useState([
+      {nombre: 'Somos CanHijos', url: '/somosCanHijos'}, 
+      {nombre: 'PerrHijos', url: '/category/perrhijos'},
+      {nombre: 'GatHijos', url: '/category/gathijos'},
+      {nombre: 'AvHijos', url: '/category/avhijos'}
+    ])
+  
+  return(
+      <header>
+          <nav className="itNavbar">
+              <NavLink to='/' className="lgNavbar">
+              <img src={'./logCanhijo96.png'} alt={'logo'}/>
+              </NavLink> 
+              <ul className="mnNavbar">
+                  {links.map((link, i) => {
+                  return (<li  key={i}><NavLink className="lkNavbar" to={link.url}>{link.nombre}</NavLink></li>)
+                  })}
+                  <CartWidget/>
+              </ul>
+          </nav>
+      </header>      
+  )
 }
-
 export default NavBar

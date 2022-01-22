@@ -1,34 +1,51 @@
-  h3{
-      font-size: 50px;
+* {
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 0;
+    top: 0;
   }
-  .navBar {
+  .itNavbar {
     display: flex;
     align-items: center;
     background-color: #0c64e98f;
-    width: 100vw;
-    height: 80px;
-    color: white;
+    width: 98vw;
+    height: 88px;
+    font-size: 28px;
     box-shadow: 0px 1px 10px rgba(0,0,0,1);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    margin-top:10px;
     z-index: 1;
     justify-content: center;    
 }
-.navBar Button {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 23px;
+.lgNavbar{
+    display: flex;
+    width: 80vw;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.itNavbar Button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
     text-decoration: none;
     color: white;
     background-color: #AF9AB2;
     margin: 20px;
 }
-.CarritoContainer{
+
+.mnNavbar{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    list-style: none;
+    width: 50vw;
+    margin-right: 153px;
 }
-.CategoryName{
+
+.lkNavbar{
+    color:#0B1D51;
     text-decoration: none;
-    border-radius: 25;
-    margin: 0 50px
+    padding: 10px 30px;
 }

@@ -1,27 +1,29 @@
+import React from 'react';
 import './App.css';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { BrowserRouter} from 'react-router-dom'
 import NavBar from "./Components/NavBar/NavBar"
-import Button from '@mui/material/Button'
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
-import ItemCount from './Components/ItemCount/ItemCount'
+import Principal from './Components/Principal/Principal'
+import {StoreProvider} from './Context/CartContext'
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <StoreProvider>
+      <BrowserRouter>
       <header className="App-header">
-        <NavBar />
-        <ItemListContainer />
-        <ItemDetailContainer />
-        <ItemCount />
-        <img src={'./logoCanhijo.png'}/>
+      <NavBar />
+    <Principal />
         
-       <Button>
-         Aceptar
-       </Button>
+      <img  className='logo' src='./logoCanhijo.png' alt='Logo de la pagina'/>
+      <p><InstagramIcon />Fer_nandapp <GitHubIcon /></p>
+       
       </header>
-    </div>
+      </BrowserRouter>
+
+    </StoreProvider>
   );
 }
 
-export default App;
+export default App
